@@ -2,6 +2,7 @@
 
 An autonomous email triage and reply system built with [Claude Code](https://claude.ai/claude-code) and Google Workspace CLI (`gws`).
 
+![image](screenshot triage.png)
 
 Every workday at 8:30, Claude Code reads your inbox, drafts replies in your voice, saves them as Gmail drafts, and blocks time in your calendar. You wake up, open Gmail, review the drafts, and hit Send.
 
