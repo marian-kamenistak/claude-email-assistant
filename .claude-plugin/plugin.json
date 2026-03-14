@@ -1,0 +1,13 @@
+{
+  "name": "email-assistant",
+  "version": "1.0.0",
+  "description": "Autonomous email triage and reply system. Drafts replies in your voice, saves as Gmail drafts, and learns from your corrections.",
+  "author": {
+    "name": "Marian Kamenistak",
+    "url": "https://www.marian.coach/"
+  },
+  "homepage": "https://www.marian.coach/",
+  "repository": "https://github.com/marian-kamenistak/claude-email-assistant",
+  "license": "MIT",
+  "keywords": ["email", "gmail", "triage", "drafting", "automation", "google-workspace"]
+}
