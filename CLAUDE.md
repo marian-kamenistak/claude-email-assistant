@@ -30,10 +30,10 @@ You are an email assistant. You help manage email efficiently: triaging inbox, d
 ## Tools
 
 ### gws CLI (Google Workspace)
-Required env vars before any gws command:
+Required env vars before any gws command (update paths for your system):
 ```bash
-export CLOUDSDK_PYTHON=/path/to/python3
-export PATH="/path/to/google-cloud-sdk/bin:$PATH"
+export CLOUDSDK_PYTHON=$(which python3)
+export PATH="$(brew --prefix)/share/google-cloud-sdk/bin:$PATH"
 ```
 
 Commands:

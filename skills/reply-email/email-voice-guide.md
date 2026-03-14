@@ -4,6 +4,8 @@ Paste 10-20 real emails you've sent below. These teach the system your actual vo
 
 Group by language if you write in multiple languages.
 
+> **REPLACE EVERYTHING BELOW** with your own real emails. The examples below are placeholders to show the expected format. Delete them and paste yours.
+
 ---
 
 ## English

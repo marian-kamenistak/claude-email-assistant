@@ -6,7 +6,7 @@
     "name": "Marian Kamenistak",
     "url": "https://www.marian.coach/"
   },
-  "homepage": "https://www.marian.coach/",
+  "homepage": "https://github.com/marian-kamenistak/claude-email-assistant",
   "repository": "https://github.com/marian-kamenistak/claude-email-assistant",
   "license": "MIT",
   "keywords": ["email", "gmail", "triage", "drafting", "automation", "google-workspace"]

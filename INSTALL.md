@@ -55,9 +55,10 @@ The setup script will:
 1. Ask for your working directory path
 2. Ask for your Google Calendar ID (for the ops calendar)
 3. Ask for your timezone
-4. Generate the launchd plist
-5. Create Gmail labels
-6. Install the launchd agent
+4. Configure the launchd plist with your paths and schedule
+5. Install the launchd agent
+
+Note: Gmail labels must be created manually — see step 2b below.
 
 ### Manual setup (if you prefer)
 

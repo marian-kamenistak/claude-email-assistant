@@ -81,6 +81,23 @@ Only send directly if user says "send it":
 gws gmail +reply --message-id MESSAGE_ID --body "REPLY_TEXT"
 ```
 
+## Gmail label IDs
+
+Configure these label IDs after creating them in Gmail (see INSTALL.md step 2b):
+
+```
+AI_READY_LABEL_ID=Label_XXX
+INFO_LABEL_ID=Label_XXX
+OPS_LABEL_ID=Label_XXX
+HIGH_LABEL_ID=Label_XXX
+BILLING_LABEL_ID=Label_XXX
+```
+
+To find your label IDs:
+```bash
+gws gmail users labels list --params '{"userId":"me"}' --format json
+```
+
 ## Step 5: Learn from the outcome
 
 ### Immediate learning

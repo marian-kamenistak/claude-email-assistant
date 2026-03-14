@@ -2,7 +2,7 @@
 
 An autonomous email triage and reply system built with [Claude Code](https://claude.ai/claude-code) and Google Workspace CLI (`gws`).
 
-![image](screenshottriage.png)
+![Email triage screenshot](screenshot-triage.png)
 
 Every workday at 8:30, Claude Code reads your inbox, drafts replies in your voice, saves them as Gmail drafts, and blocks time in your calendar. You wake up, open Gmail, review the drafts, and hit Send.
 
@@ -49,7 +49,7 @@ The system learns from every edit you make. If you change a draft before sending
 ## Prerequisites
 
 - macOS (uses `launchd` for scheduling)
-- [Claude Code CLI](https://claude.ai/claude-code) installed (`/usr/local/bin/claude`)
+- [Claude Code CLI](https://claude.ai/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
 - [gws CLI](https://github.com/nicholasgasior/gws) — Google Workspace CLI with Gmail and Calendar access
 - iTerm2 (optional, for the interactive terminal with distinct styling)
 - A Google Workspace account with Gmail API and Calendar API enabled
@@ -62,7 +62,7 @@ See [INSTALL.md](INSTALL.md) for the full setup guide.
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/YOUR_USERNAME/claude-email-assistant.git
+git clone https://github.com/marian-kamenistak/claude-email-assistant.git
 cd claude-email-assistant
 
 # 2. Run the setup script
@@ -76,9 +76,13 @@ cd claude-email-assistant
 
 ```
 claude-email-assistant/
+├── .claude-plugin/
+│   └── plugin.json                    # Plugin manifest for marketplace
 ├── CLAUDE.md                          # Claude Code project instructions
 ├── INSTALL.md                         # Full installation guide
+├── LICENSE                            # MIT license
 ├── setup.sh                           # Interactive setup script
+├── screenshot-triage.png              # Triage output screenshot
 ├── scripts/
 │   └── morning-triage.sh             # The scheduler script (launched by launchd)
 ├── launchd/
@@ -141,6 +145,10 @@ Edit `shared/communication-style.md` with your writing rules:
 
 ### Schedule
 Edit the launchd plist to change when the triage runs. Default is weekdays at 8:30.
+
+## Security note
+
+The morning triage script uses `--dangerously-skip-permissions` because it runs unattended via launchd. This flag allows Claude Code to execute tools without interactive approval prompts. Review the prompt in `scripts/morning-triage.sh` to understand exactly what it does autonomously.
 
 ## Limitations
 
