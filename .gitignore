@@ -1,0 +1,14 @@
+# Logs
+*.log
+Library/
+
+# Personal data (never commit these)
+skills/reply-email/learned-replies.md
+skills/reply-email/drafts-log.md
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

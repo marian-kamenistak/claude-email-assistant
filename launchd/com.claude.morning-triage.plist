@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.morning-triage</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <!-- UPDATE THIS PATH to your project location -->
+        <string>/Users/YOU/projects/claude-email-assistant/scripts/morning-triage.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <!-- UPDATE THIS PATH to your project location -->
+    <string>/Users/YOU/projects/claude-email-assistant</string>
+
+    <key>StartCalendarInterval</key>
+    <array>
+        <!-- Monday through Friday at 8:30 AM local time -->
+        <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+        <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+        <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+        <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+        <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/Users/YOU/Library/Logs/claude-morning-triage/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/YOU/Library/Logs/claude-morning-triage/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <!-- UPDATE THIS to your home directory -->
+        <string>/Users/YOU</string>
+    </dict>
+</dict>
+</plist>
