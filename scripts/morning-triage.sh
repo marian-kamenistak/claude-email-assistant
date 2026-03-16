@@ -56,7 +56,7 @@ tell application \"iTerm\"
         -- Dark navy background to distinguish from regular terminals
         set background color to {6682, 8738, 16384}
         -- Set tab/window title
-        # write text \"printf '\\\\e]1;Email Triage\\\\a' && printf '\\\\e]2;Email Triage\\\\a' && cd '$WORKDIR' && claude --dangerously-skip-permissions --model sonnet --max-budget-usd 2.00 '$PROMPT'\"
+        -- write text \"printf '\\\\e]1;Email Triage\\\\a' && printf '\\\\e]2;Email Triage\\\\a' && cd '$WORKDIR' && claude --dangerously-skip-permissions --model sonnet --max-budget-usd 2.00 '$PROMPT'\"        
         write text \"printf '\\\\e]1;Email Triage\\\\a' && printf '\\\\e]2;Email Triage\\\\a' && cd '$WORKDIR' && claude --model sonnet --max-budget-usd 2.00 '$PROMPT'\"
     end tell
 end tell
